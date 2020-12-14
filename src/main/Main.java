@@ -19,7 +19,7 @@ public class Main {
                 System.out.println(" Las alumnas aprobadas son " + alumnaiteradora.getNombre() + " " + alumnaiteradora.getApellido() +" con "+ notaFinal );
             }
             else {
-                System.out.println(" Las alumnas reprobadas son " + alumnaiteradora.getNombre() + " " + alumnaiteradora.getApellido() +" con "+ notaFinal );
+                System.out.println("Las alumnas reprobadas son " + alumnaiteradora.getNombre() + " " + alumnaiteradora.getApellido() +" con "+ notaFinal );
 
             }
         }
