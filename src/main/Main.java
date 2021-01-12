@@ -22,6 +22,9 @@ public class Main {
                 System.out.println("Las alumnas reprobadas son " + alumnaiteradora.getNombre() + " " + alumnaiteradora.getApellido() +" con "+ notaFinal );
 
             }
+            System.out.print("mensaje de prueba para subir a git");
+            System.out.print("segundaaaa prueba para subir a git");
+
         }
 
     }
