@@ -1,24 +1,26 @@
 package modelos;
 
+import modelos.enums.TipoCurso;
+
 public class Curso {
-    private String nombre;
+    private TipoCurso tipoCurso;
 
-    public Curso(String nombre) {
-        this.nombre = nombre;
+    public Curso(TipoCurso tipoCurso) {
+        this.tipoCurso = tipoCurso;
     }
 
-    public String getNombre() {
-        return nombre;
+    public TipoCurso getTipoCurso() {
+        return tipoCurso;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setTipoCurso(TipoCurso tipoCurso) {
+        this.tipoCurso = tipoCurso;
     }
 
     @Override
     public String toString() {
         return "Curso{" +
-                "nombre='" + nombre + '\'' +
+                "tipoCurso=" + tipoCurso +
                 '}';
     }
 }
