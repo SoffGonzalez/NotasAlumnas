@@ -6,9 +6,6 @@ public class Notas {
     private int nota3;
     private int nota4;
 
-
-
-
     public Notas(int nota1, int nota2, int nota3, int nota4) {
         this.nota1 = nota1;
         this.nota2 = nota2;

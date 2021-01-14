@@ -1,12 +1,16 @@
 package modelos;
 
+import modelos.enums.TipoCurso;
+
 public class Alumnas extends  Persona {
 
     private Notas Notas;
+    private TipoCurso tipoCurso;
 
-    public Alumnas(String nombre, String apellido, int dni, modelos.Notas notas) {
+    public Alumnas(String nombre, String apellido, int dni, modelos.Notas notas, TipoCurso tipoCurso) {
         super(nombre, apellido, dni);
         Notas = notas;
+        this.tipoCurso = tipoCurso;
     }
 
     public modelos.Notas getNotas() {
@@ -17,11 +21,20 @@ public class Alumnas extends  Persona {
         Notas = notas;
     }
 
+    public TipoCurso getTipoCurso() {
+        return tipoCurso;
+    }
+
+    public void setTipoCurso(TipoCurso tipoCurso) {
+        this.tipoCurso = tipoCurso;
+    }
+
     @Override
     public String toString() {
         return "Alumnx{" +
                 "nombre= '" + getNombre() + //acà  la barra invertida ubica los datos uno debajo del otro
                 "' apellido= '" + getApellido() +
+                "' curso= '" + tipoCurso.name() +
                 "' Notas= " + Notas +
                 "' dni= " + getDni() +
                 '}';
