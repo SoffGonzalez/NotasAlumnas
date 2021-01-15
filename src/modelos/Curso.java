@@ -1,26 +1,52 @@
 package modelos;
 
+import com.sun.scenario.effect.impl.prism.PrImage;
+import modelos.enums.TipoCursada;
 import modelos.enums.TipoCurso;
 
 public class Curso {
-    private TipoCurso tipoCurso;
+    private TipoCursada tipoCursada;
+    private Profesor profesor;
+    private Alumnas alumnas;
 
-    public Curso(TipoCurso tipoCurso) {
-        this.tipoCurso = tipoCurso;
+    public Curso(TipoCursada tipoCursada, Profesor profesor, Alumnas alumnas) {
+
+        this.tipoCursada = tipoCursada;
+        this.profesor = profesor;
+        this.alumnas = alumnas;
     }
 
-    public TipoCurso getTipoCurso() {
-        return tipoCurso;
+
+    public TipoCursada getTipoCursada() {
+        return tipoCursada;
     }
 
-    public void setTipoCurso(TipoCurso tipoCurso) {
-        this.tipoCurso = tipoCurso;
+    public void setTipoCursada(TipoCursada tipoCursada) {
+        this.tipoCursada = tipoCursada;
+    }
+
+    public Profesor getProfesor() {
+        return profesor;
+    }
+
+    public void setProfesor(Profesor profesor) {
+        this.profesor = profesor;
+    }
+
+    public Alumnas getAlumnas() {
+        return alumnas;
+    }
+
+    public void setAlumnas(Alumnas alumnas) {
+        this.alumnas = alumnas;
     }
 
     @Override
     public String toString() {
         return "Curso{" +
-                "tipoCurso=" + tipoCurso +
+                ", tipoCursada=" + tipoCursada.name() +
+                ", profesor=" + profesor +
+                ", alumnas=" + alumnas +
                 '}';
     }
 }

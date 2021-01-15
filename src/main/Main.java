@@ -3,6 +3,7 @@ package main;
 import interfaces.IPoblarClases;
 import interfaces.implementacion.PoblarClasesImpl;
 import modelos.Alumnas;
+import modelos.Curso;
 
 import java.util.List;
 
@@ -12,6 +13,9 @@ public class Main {
         double notaFinal;
         List <Alumnas> alumnas = poblarClases.CrearAlumnas();
         //System.out.println(alumnas);
+        List<Curso> cursos = poblarClases.CrearCursos();
+
+        System.out.println(cursos);
 
         for (Alumnas alumnaiteradora : alumnas){
             notaFinal = alumnaiteradora.CalcularNotaFinal();

@@ -1,39 +1,39 @@
 package modelos;
 
-    public class Profesor extends Persona {
-    private  int codProfesor;
-    private Curso curso;
+import modelos.enums.TipoCursada;
 
-        public Profesor(String nombre, String apellido, int dni, int codProfesor, Curso curso) {
-            super(nombre, apellido, dni);
-            this.codProfesor = codProfesor;
-            this.curso = curso;
-        }
+public class Profesor extends Persona {
+    private int codProfesor;
+    private TipoCursada cursada;
 
-        public int getCodProfesor() {
-            return codProfesor;
-        }
-
-        public void setCodProfesor(int codProfesor) {
-            this.codProfesor = codProfesor;
-        }
-
-        public Curso getCurso() {
-            return curso;
-        }
-
-        public void setCurso(Curso curso) {
-            this.curso = curso;
-        }
-
-        @Override
-        public String toString() {
-            return "Alumnx{" +
-                    "nombre= '" + getNombre()  + //acà  la barra invertida ubica los datos uno debajo del otro
-                    "' apellido= '" + getApellido()  +
-                    "' codProfesor= " + codProfesor +
-                    "' dni= " + getDni() +
-                     "' curso =" + curso +
-                    '}';
-        }
+    public Profesor(String nombre, String apellido, int dni, int codProfesor, TipoCursada cursada) {
+        super(nombre, apellido, dni);
+        this.codProfesor = codProfesor;
+        this.cursada = cursada;
     }
+
+    public int getCodProfesor() {
+        return codProfesor;
+    }
+
+    public void setCodProfesor(int codProfesor) {
+        this.codProfesor = codProfesor;
+    }
+
+    public TipoCursada getCursada() {
+        return cursada;
+    }
+
+    public void setCursada(TipoCursada cursada) {
+        this.cursada = cursada;
+    }
+
+    @Override
+    public String toString() {
+        return "Profesor{" +
+                "codProfesor=" + codProfesor +
+                ", cursada=" + cursada.name() +
+                '}';
+    }
+}
+
