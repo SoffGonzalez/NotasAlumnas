@@ -5,15 +5,15 @@ import modelos.enums.TipoCursada;
 public class Alumnas extends  Persona {
 
     private Notas Notas;
-    private TipoCursada tipoCursada;
 
 
 
-    public Alumnas(String nombre, String apellido, int dni, modelos.Notas notas, TipoCursada tipoCursada) {
+
+    public Alumnas(String nombre, String apellido, int dni, modelos.Notas notas) {
         super(nombre, apellido, dni);
         Notas = notas;
 
-        this.tipoCursada = tipoCursada;
+
     }
 
     public modelos.Notas getNotas() {
