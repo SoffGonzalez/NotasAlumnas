@@ -28,7 +28,7 @@ public class Main {
         //System.out.println("Esto es un ensayo");
 
         List<Curso> cursos = poblarClases.CrearCursos();
-        System.out.println(cursos.get(0));
+        System.out.println(cursos);
     }
 
 }

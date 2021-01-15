@@ -1,10 +1,12 @@
 package modelos;
 
-    public class Profesor extends Persona {
-    private  int codProfesor;
-    private Curso curso;
+import modelos.enums.TipoCurso;
 
-        public Profesor(String nombre, String apellido, int dni, int codProfesor, Curso curso) {
+public class Profesor extends Persona {
+    private  int codProfesor;
+    private TipoCurso curso;
+
+        public Profesor(String nombre, String apellido, int dni, int codProfesor, TipoCurso curso) {
             super(nombre, apellido, dni);
             this.codProfesor = codProfesor;
             this.curso = curso;
@@ -18,15 +20,15 @@ package modelos;
             this.codProfesor = codProfesor;
         }
 
-        public Curso getCurso() {
+        public TipoCurso getCurso() {
             return curso;
         }
 
-        public void setCurso(Curso curso) {
-            this.curso = curso;
+        public void setCurso(TipoCurso curso) {
+         this.curso = curso;
         }
 
-        @Override
+    @Override
         public String toString() {
             return "Alumnx{" +
                     "nombre= '" + getNombre()  + //acà  la barra invertida ubica los datos uno debajo del otro
