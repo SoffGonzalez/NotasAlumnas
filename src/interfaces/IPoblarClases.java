@@ -10,6 +10,7 @@ import java.util.List;
 public interface IPoblarClases {
 
     List <Alumnas> CrearAlumnas  ();
+
     List<Profesor> CrearProfesores ();
 
     List <Notas> CrearNotas ();

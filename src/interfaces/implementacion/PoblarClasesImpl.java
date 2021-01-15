@@ -32,7 +32,6 @@ public class PoblarClasesImpl  implements IPoblarClases {
         cursos.add(curso1);
         cursos.add(curso2);
 
-
         return cursos;
     }
 

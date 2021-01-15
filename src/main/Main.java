@@ -9,19 +9,24 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
+        double notaFinal;
+
         IPoblarClases poblarClases = new PoblarClasesImpl();
 
         List <Alumnas> alumnas = poblarClases.CrearAlumnas();
-        //System.out.println(alumnas);
-        //System.out.print("mensaje de prueba para subir a git");
-        //System.out.print("segundaaaa prueba para subir a git");
+        System.out.println(alumnas);
 
-        //System.out.println("Esto es un ensayo");
-
-        System.out.printf();
+        for (Alumnas alumnaiteradora : alumnas) {
+            notaFinal = alumnaiteradora.CalcularNotaFinal();
+            if (notaFinal >= 4.0) {
+                System.out.println(" Las alumnas aprobadas son " + alumnaiteradora.getNombre() + " " + alumnaiteradora.getApellido() + " con " + notaFinal);
+            } else {
+                System.out.println("Las alumnas reprobadas son " + alumnaiteradora.getNombre() + " " + alumnaiteradora.getApellido() + " con " + notaFinal);
+            }
+        }
 
         List<Curso> cursos = poblarClases.CrearCursos();
         System.out.println(cursos);
     }
-
 }
