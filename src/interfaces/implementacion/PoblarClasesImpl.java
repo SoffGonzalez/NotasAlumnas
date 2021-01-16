@@ -30,8 +30,6 @@ public class PoblarClasesImpl  implements IPoblarClases {
         alumnasFrontEnd.add(CrearAlumnas().get(3));
         alumnasFrontEnd.add(CrearAlumnas().get(4));
 
-
-
         Curso backEnd = new Curso(TipoCurso.BACKEND, profesorBackEnd, alumnasBackEnd);
         Curso frontEnd = new Curso(TipoCurso.FRONTEND, profesorFrontEnd, alumnasFrontEnd);
 
@@ -89,5 +87,4 @@ public class PoblarClasesImpl  implements IPoblarClases {
         calificaciones.add(Camila);
         return calificaciones;
     }
-
 }
