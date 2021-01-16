@@ -2,14 +2,24 @@ package modelos;
 
 import modelos.enums.TipoCurso;
 
+import java.util.List;
+
 public class Curso {
     private TipoCurso tipoCurso;
-    private Profesor profesor;
-    private Alumnas alumnas;
+    private List<Profesor> profesors;
+    private List <Alumnas> alumnas;
 
-    public Curso(TipoCurso tipoCurso, Profesor profesor, Alumnas alumnas) {
+    public Curso(TipoCurso tipoCurso, List<Profesor> profesors, List<Alumnas> alumnas) {
         this.tipoCurso = tipoCurso;
-        this.profesor = profesor;
+        this.alumnas = alumnas;
+        this.profesors = profesors;
+    }
+
+    public List<Alumnas> getAlumnas() {
+        return alumnas;
+    }
+
+    public void setAlumnas(List<Alumnas> alumnas) {
         this.alumnas = alumnas;
     }
 
@@ -21,27 +31,19 @@ public class Curso {
         this.tipoCurso = tipoCurso;
     }
 
-    public Profesor getProfesor() {
-        return profesor;
+    public List<Profesor> getProfesors() {
+        return profesors;
     }
 
-    public void setProfesor(Profesor profesor) {
-        this.profesor = profesor;
-    }
-
-    public Alumnas getAlumnas() {
-        return alumnas;
-    }
-
-    public void setAlumnas(Alumnas alumnas) {
-        this.alumnas = alumnas;
+    public void setProfesors(List<Profesor> profesors) {
+        this.profesors = profesors;
     }
 
     @Override
     public String toString() {
         return "Curso{" +
                 "tipoCurso=" + tipoCurso.name() +
-                ", profesor=" + profesor +
+                ", profesor=" + profesors +
                 ", alumnas=" + alumnas +
                 '}';
     }

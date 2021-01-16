@@ -1,15 +1,11 @@
 package modelos;
 
-import modelos.enums.TipoCurso;
-
 public class Profesor extends Persona {
     private  int codProfesor;
-    private TipoCurso curso;
 
-        public Profesor(String nombre, String apellido, int dni, int codProfesor, TipoCurso curso) {
+        public Profesor(String nombre, String apellido, int dni, int codProfesor) {
             super(nombre, apellido, dni);
             this.codProfesor = codProfesor;
-            this.curso = curso;
         }
 
         public int getCodProfesor() {
@@ -20,14 +16,6 @@ public class Profesor extends Persona {
             this.codProfesor = codProfesor;
         }
 
-        public TipoCurso getCurso() {
-            return curso;
-        }
-
-        public void setCurso(TipoCurso curso) {
-         this.curso = curso;
-        }
-
     @Override
         public String toString() {
             return "Alumnx{" +
@@ -35,7 +23,6 @@ public class Profesor extends Persona {
                     "' apellido= '" + getApellido()  +
                     "' codProfesor= " + codProfesor +
                     "' dni= " + getDni() +
-                     "' curso =" + curso +
                     '}';
         }
     }

@@ -1,8 +1,5 @@
 package modelos;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Alumnas extends  Persona {
 
     private Notas Notas;

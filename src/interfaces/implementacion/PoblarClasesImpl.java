@@ -9,9 +9,6 @@ import modelos.enums.TipoCurso;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
-
-import static modelos.enums.TipoCurso.BACKEND;
 
 public class PoblarClasesImpl  implements IPoblarClases {
 
@@ -19,18 +16,27 @@ public class PoblarClasesImpl  implements IPoblarClases {
     public List<Curso> CrearCursos() {
 
         List <Curso> cursos = new ArrayList<>();
+        List <Alumnas> alumnasBackEnd = new ArrayList<>();
+        List <Alumnas> alumnasFrontEnd = new ArrayList<>();
+        List<Profesor> profesorBackEnd = new ArrayList<>();
+        List<Profesor> profesorFrontEnd = new ArrayList<>();
 
-        Profesor fran = new Profesor("Fran", "Herrera", 321654,987654, BACKEND);
-        Profesor luisa = new Profesor("Luisa", "Martinez", 123456,456789, TipoCurso.FRONTEND);
+        profesorBackEnd.add(CrearProfesores().get(0));
+        profesorFrontEnd.add(CrearProfesores().get(1));
 
-        Alumnas Ale = new Alumnas("ALE","PANOZO",12346, CrearNotas().get (1));
-        Alumnas Sofia = new Alumnas("SOFIA","GONZALEZ",12347, CrearNotas().get (2));
+        alumnasBackEnd.add(CrearAlumnas().get(0));
+        alumnasBackEnd.add(CrearAlumnas().get(1));
+        alumnasBackEnd.add(CrearAlumnas().get(2));
+        alumnasFrontEnd.add(CrearAlumnas().get(3));
+        alumnasFrontEnd.add(CrearAlumnas().get(4));
 
-        Curso curso1 = new Curso(BACKEND, fran, Ale);
-        Curso curso2 = new Curso(TipoCurso.FRONTEND, luisa, Sofia);
 
-        cursos.add(curso1);
-        cursos.add(curso2);
+
+        Curso backEnd = new Curso(TipoCurso.BACKEND, profesorBackEnd, alumnasBackEnd);
+        Curso frontEnd = new Curso(TipoCurso.FRONTEND, profesorFrontEnd, alumnasFrontEnd);
+
+        cursos.add(backEnd);
+        cursos.add(frontEnd);
 
         return cursos;
     }
@@ -58,8 +64,8 @@ public class PoblarClasesImpl  implements IPoblarClases {
     public List<Profesor> CrearProfesores() {
         List <Profesor> profesores = new ArrayList<>();
 
-        Profesor fran = new Profesor("Fran", "Herrera", 321654,987654, BACKEND);
-        Profesor luisa = new Profesor("Luisa", "Martinez", 123456,456789, TipoCurso.FRONTEND);
+        Profesor fran = new Profesor("Fran", "Herrera", 321654,987654);
+        Profesor luisa = new Profesor("Luisa", "Martinez", 123456,456789);
 
         profesores.add(fran);
         profesores.add(luisa);
