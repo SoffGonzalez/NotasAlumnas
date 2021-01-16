@@ -20,7 +20,10 @@ public class Alumnas extends  Persona {
     @Override
     public String toString() {
         return "Alumnas{" +
-                "Notas=" + Notas +
+                "Nombre= "+ getNombre()+
+                " Apellido= " + getApellido()+
+                " dni= " + getDni() +
+                " Notas=" + Notas +
                 '}';
     }
 
